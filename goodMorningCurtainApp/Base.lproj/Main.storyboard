@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Scanning" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-eK-Lhs">
+                                <rect key="frame" x="20" y="28" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fLr-qh-5kb">
+                                <rect key="frame" x="153" y="23" width="51" height="31"/>
+                                <connections>
+                                    <action selector="startBTScanning:" destination="BYZ-38-t0r" eventType="valueChanged" id="MGh-cI-rk9"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gm1-iU-JCn">
+                                <rect key="frame" x="20" y="552" width="339" height="29"/>
+                                <segments>
+                                    <segment title="LED OFF"/>
+                                    <segment title="Sunny"/>
+                                    <segment title="Cloud"/>
+                                    <segment title="Rainy"/>
+                                    <segment title="Auto"/>
+                                </segments>
+                                <connections>
+                                    <action selector="Scratch1ControllSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y4d-kc-q9W"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYd-fb-kTT">
+                                <rect key="frame" x="252" y="25" width="210" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gm1-iU-JCn" secondAttribute="bottom" constant="20" id="3Pw-eR-c9U"/>
+                            <constraint firstItem="Gm1-iU-JCn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wfc-LQ-gia"/>
+                            <constraint firstItem="Vgl-eK-Lhs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ehP-QX-VH4"/>
+                            <constraint firstItem="fLr-qh-5kb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="3" id="rXE-BF-WJR"/>
+                            <constraint firstItem="Vgl-eK-Lhs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xLg-11-rAf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BTScanSwitch" destination="fLr-qh-5kb" id="ZTp-C8-lgx"/>
+                        <outlet property="Scratch1Control" destination="Gm1-iU-JCn" id="6hv-94-h5z"/>
+                        <outlet property="consoleText" destination="Vgl-eK-Lhs" id="Oe8-rh-bM5"/>
+                        <outlet property="timeTextField" destination="gYd-fb-kTT" id="hSV-ZK-3hq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="440"/>
+        </scene>
+    </scenes>
+</document>
